@@ -1,0 +1,22 @@
+03180875-350d-49aa-90fe-c249ef6720ea
+A45E5CF55E5CC1AA
+
+
+1658-FDB0
+
+
+
+
+
+1. lsblk
+2. sudo blkid /dev/sdX
+3. sudo nano /etc/grub.d/40_custom
+4. --set=root - UUID from blkid
+menuentry 'Windows 10' --class windows --class os {
+    search --fs-uuid --no-floppy --set=root 1658-FDB0
+    chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
+}
+5. sudo update-grub
+
+1. sudo nano /etc/default/grub
+2. GRUB_TIMEOUT_STYLE=menu
