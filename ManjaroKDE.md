@@ -33,11 +33,11 @@
  2. Найти EFI раздел и вывести информацию по нему: `sudo blkid /dev/sdX`
  3. Редактирование *GRUB*: `sudo nano /etc/grub.d/40_custom`
  4. Добавить в конец запись:
---set=root - *(UUID из blkid, шаг 2)*
+`--set=root - *(UUID из blkid, шаг 2)*
 menuentry 'Windows 10' --class windows --class os {
     search --fs-uuid --no-floppy --set=root 1658-FDB0
     chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
-}
+}`
  5. Обновить *GRUB*: `sudo update-grub`
 
 **Включение меню выбора в GRUB**
