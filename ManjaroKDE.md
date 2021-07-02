@@ -52,8 +52,6 @@ menuentry 'Windows 10' --class windows --class os {
  1. Вариант 1: `cd /usr/share/applications/ && sudo sed -i "s/"'Exec=spotify %U'"/"'Exec=spotify %U --no-zygote'"/" spotify.desktop && cd ~`
  2. Вариант 2: `cd /usr/share/applications/ && sudo sed -i "s/"'Exec=spotify %U'"/"'Exec=spotify %U --disable-gpu --disable-software-rasterizer'"/" spotify.desktop && cd ~`
 
-**Запуск TeamViewer службы**: `systemctl start teamviewerd.service`
-
 **Установка NVM**
  1. Установка NVM: `sudo pacman -S nvm`
  2. Добавление NVM: `echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.bashrc && exec $SHELL`
@@ -61,3 +59,18 @@ menuentry 'Windows 10' --class windows --class os {
  4. Установка *NodeJS*: `nvm install v(последняя LTS версия)`
  5. Выбора версии *NodeJS*: `nvm use ($lts)`
 
+**ZSH**
+ 1. Выбрать ZSH активному пользователю: `chsh -s /usr/bin/zsh`
+ 2. Выбрать ZSH для SuperUser: `su -` и `chsh -s /usr/bin/zsh`
+ 3. Установить Oh-My-Zsh: `sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+**Настройка Chrome**
+ 1. `chrome://flags/`
+ 2. *Smooth Scrolling = Disabled*
+ 3. *Parallel Download = Enabled*
+
+**Вывод инфорации по видеокарте**: `lspci -k | grep -EA3 'VGA|3D|Display'`
+
+**Запуск TeamViewer службы**: `systemctl start teamviewerd.service`
+
+**Открытый ключ Spotify**: `curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import - Tip`
