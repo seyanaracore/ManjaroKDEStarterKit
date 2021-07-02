@@ -31,7 +31,7 @@
 **Добавить Windows в GRUB**
  1. Вывести разделы: `lsblk`
  2. Найти EFI раздел и вывести информацию по нему: `sudo blkid /dev/sdX`
- 3. Редактирование *GRUB*: `sudo nano /etc/grub.d/40_custom`
+ 3. Добавление своих записей в *GRUB*: `sudo nano /etc/grub.d/40_custom`
  4. Добавить в конец запись:
 `--set=root - *(UUID из blkid, шаг 2)*
 menuentry 'Windows 10' --class windows --class os {
@@ -43,3 +43,13 @@ menuentry 'Windows 10' --class windows --class os {
 **Включение меню выбора в GRUB**
  1. Редактировать настройки *GRUB*: `sudo nano /etc/default/grub`
  2. Установить: `GRUB_TIMEOUT_STYLE=menu`
+
+**Включить AMDGPU для дескретной видеокарты**
+ 1. Редактировать настройки *GRUB*: `sudo nano /etc/default/grub`
+ 2. GRUB_CMDLINE_LINUX_DEFAULT >> `radeon.cik_support=0 amdgpu.cik_support=1 radeon.si_support=0 amdgpu.si_support=1"`
+
+**Spotify fix**
+ 1. Вариант 1: `cd /usr/share/applications/ && sudo sed -i "s/"'Exec=spotify %U'"/"'Exec=spotify %U --no-zygote'"/" spotify.desktop && cd ~`
+ 2. Вариант 2: `cd /usr/share/applications/ && sudo sed -i "s/"'Exec=spotify %U'"/"'Exec=spotify %U --disable-gpu --disable-software-rasterizer'"/" spotify.desktop && cd ~`
+
+**Запуск TeamViewer службы**: `systemctl start teamviewerd.service`
