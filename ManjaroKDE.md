@@ -40,7 +40,7 @@ menuentry 'Windows 10' --class windows --class os {
 }`
  5. Обновить *GRUB*: `sudo update-grub`
 
-**Включение меню выбора в GRUB**
+**Включение меню выбора OS в GRUB**
  1. Редактировать настройки *GRUB*: `sudo nano /etc/default/grub`
  2. Установить: `GRUB_TIMEOUT_STYLE=menu`
 
@@ -53,3 +53,11 @@ menuentry 'Windows 10' --class windows --class os {
  2. Вариант 2: `cd /usr/share/applications/ && sudo sed -i "s/"'Exec=spotify %U'"/"'Exec=spotify %U --disable-gpu --disable-software-rasterizer'"/" spotify.desktop && cd ~`
 
 **Запуск TeamViewer службы**: `systemctl start teamviewerd.service`
+
+**Установка NVM**
+ 1. Установка NVM: `sudo pacman -S nvm`
+ 2. Добавление NVM: `echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.bashrc && exec $SHELL`
+ 3. Вывод всех доступных версий *NodeJS*: `nvm ls-remote`
+ 4. Установка *NodeJS*: `nvm install v(последняя LTS версия)`
+ 5. Выбора версии *NodeJS*: `nvm use ($lts)`
+
