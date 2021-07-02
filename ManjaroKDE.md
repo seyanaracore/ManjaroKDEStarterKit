@@ -97,8 +97,8 @@ menuentry 'Windows 10' --class windows --class os {
  3. *Parallel Download = Enabled*
 
 **Swappiness 10%**
-    1. `sudo nano /etc/sysctl.d/100-manjaro.conf` >> `vm.swappiness=10`
-    2. `sudo sysctl vm.swappiness=10`
+ 1. `sudo nano /etc/sysctl.d/100-manjaro.conf` >> `vm.swappiness=10`
+ 2. `sudo sysctl vm.swappiness=10`
 
 **Запуск SSDTrim**: `sudo systemctl start fstrim.timer`
 
