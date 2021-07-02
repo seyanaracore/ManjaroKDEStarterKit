@@ -96,13 +96,13 @@ menuentry 'Windows 10' --class windows --class os {
  2. *Smooth Scrolling = Disabled*
  3. *Parallel Download = Enabled*
 
-**Swappiness 10%**
+**Swappiness 10%**:
  1. `sudo nano /etc/sysctl.d/100-manjaro.conf` >> `vm.swappiness=10`
  2. `sudo sysctl vm.swappiness=10`
 
 **Запуск SSDTrim**: `sudo systemctl start fstrim.timer`
 
-**Запуск программ с DRI_PRIME=1**: `su -c'echo test >>  /etc/environment'`
+**Запуск программ с DRI_PRIME=1**: `su -c'echo DRI_PRIME=1 >>  /etc/environment'`
 
 **KDE виджеты**: `mediacontroller_plus`; `application menu`; `latte spacer`; `better inline clock`
 
