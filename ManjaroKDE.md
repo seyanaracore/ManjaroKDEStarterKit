@@ -1,4 +1,4 @@
-##ManjaroKDE
+#ManjaroKDE#
 
 **Оформление**
  1. Оформление раб. среды: **Qokir Look-and-Feel Theme (Qogir-Dark)**
