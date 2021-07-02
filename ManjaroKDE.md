@@ -102,6 +102,8 @@ menuentry 'Windows 10' --class windows --class os {
 
 **Запуск SSDTrim**: `sudo systemctl start fstrim.timer`
 
+**Запуск программ с DRI_PRIME=1**: `su -c'echo test >>  /etc/environment'`
+
 **KDE виджеты**: `mediacontroller_plus`; `application menu`; `latte spacer`; `better inline clock`
 
 **Вывод инфорации по видеокарте**: `lspci -k | grep -EA3 'VGA|3D|Display'`
