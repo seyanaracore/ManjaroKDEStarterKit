@@ -5,6 +5,10 @@
  2. Дописать программы
  3. Сохранить конфиги (ВПН, гит, баш, зш)
  4. Сохранить обои
+ Nordic SDDM
+ Mouse: 5s
+ youtube-dl
+ mpv
 - **_________________________________________**
 
 - **Основные**
@@ -95,6 +99,14 @@ menuentry 'Windows 10' --class windows --class os {
     chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
 }`
  5. Обновить *GRUB*: `sudo update-grub`
+
+**Boot Splash**
+ 1. Установить: `bootsplash-systemmd`; `bootsplash-theme-manjaro`
+ 2. **Редактировать**
+    1. `/etc/mkinitcpio.conf` в `HOOKS` добавить `bootsplash-manjaro`
+    2. `/etc/default/grub` в `DEFAULT` заменить `quiet` на `bootsplash.bootfile=bootsplash-themes/manjaro/bootsplash`
+ 3. `sudo mkinitcpio -P`
+ 4. `sudo update-grub`
 
 **Включение меню выбора OS в GRUB**
  1. Редактировать настройки *GRUB*: `sudo nano /etc/default/grub`
