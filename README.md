@@ -6,7 +6,6 @@
  3. Сохранить конфиги (ВПН, гит, баш, зш)
  4. Сохранить обои
  Nordic SDDM
- Mouse: 5s
  youtube-dl
  mpv
 - **_________________________________________**
@@ -15,7 +14,7 @@
  1. **Обновить ядро**: `Manjaro Settings -> Ядра`
  2. **Обновить пакеты**: `sudo pacman -Syu`
  3. **Устройства ввода**:
-    1. *Мышь*: `режим ускорения - плоский`
+    1. *Мышь*: `режим ускорения - плоский`; `Чувствительность: 5`
     2. *Сенсорная панель*: `Естественная прокрутка` и `Эмуляция кнопок мыши`
  4. **Управление питанием**:
     1. Приостановка сеанса: `В ждущий режим - 15 мин.`
@@ -85,7 +84,7 @@
     3. **Внешний вид:** выбрать Manjaro обои.
 
  - **Запуск и завершение**
-    1. Вход в систему (SDDM): WhiteSur
+    1. Вход в систему (SDDM): `WhiteSur`; `Nordic`
         1. Выбрать Manjaro обои.
 
 **Добавить Windows в GRUB**
@@ -131,6 +130,7 @@ menuentry 'Windows 10' --class windows --class os {
  1. Выбрать ZSH активному пользователю: `chsh -s /usr/bin/zsh`
  2. Выбрать ZSH для SuperUser: `su -` и `chsh -s /usr/bin/zsh`
  3. Установить Oh-My-Zsh: `sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+ 4. Копировать *.zshrc* и *p10k.zsh* в *~*
 
 **Oh my Bash и Agnoster theme**
  1. `bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"`
