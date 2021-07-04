@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Anton Tigunov
+	email = seyanaracore@gmail.com
+[core]
+	editor = code
+[credential]
+	helper = cache

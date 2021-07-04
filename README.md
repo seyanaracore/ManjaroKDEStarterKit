@@ -1,24 +1,23 @@
 #ManjaroKDE
 
 - **_________________________________________**
- 1. Бинды клавиш
  2. Дописать программы
- 3. Сохранить конфиги (ВПН, гит, баш, зш)
- 4. Сохранить обои
- Nordic SDDM
- youtube-dl
  mpv
 - **_________________________________________**
 
 - **Основные**
  1. **Обновить ядро**: `Manjaro Settings -> Ядра`
+
  2. **Обновить пакеты**: `sudo pacman -Syu`
+
  3. **Устройства ввода**:
     1. *Мышь*: `режим ускорения - плоский`; `Чувствительность: 5`
     2. *Сенсорная панель*: `Естественная прокрутка` и `Эмуляция кнопок мыши`
+
  4. **Управление питанием**:
     1. Приостановка сеанса: `В ждущий режим - 15 мин.`
     2. При закрытии крышки ноутбука: `Ничего не делать`
+
  5. **Экран**:
     - *Обеспечение эффектов*
     1. Включить граф. эффекты при входе в систему
@@ -27,34 +26,38 @@
     4. **Задержка отрисовки**: `Предпочитать низкую задержку`
     - *Ночная цветовая схема*
     1. Использовать ночную цветовую схему: `3300K`; `От заказа до рассвета`
+
  6. **Поиск**
     - *Поиск файлов*
     1. Отключить индексирование содержимого файлов
     - *Строка поиска*
     1. В центре
     2. Модули: `KWin`; `Завершение приложений`; `Запуск программ`; `Калькулятор`; `Окна`; `Преобразование величин`; `Расположения`; `Точки входа`
+
  7. **Локаклизация**:
     1. *Язык*: `Русский (По умолчанию)`
+
  8. **Диспетчер окон**:
     - *Поведение окон*
     1. Дополнительно: `По центру`; `Не разрешать сохранять геометрию`
     - *Переключение окон*: `Показывать выбранное окно`; `Сетка миниатюр`
 
+ 7. **Reboot**
 
-7. **Reboot**
-
-8. **Reapply KDE Wallet**
-9. Localization => Russian as default
-10. Install network driver
-11. Pacman
+ 8. **Reapply KDE Wallet**
+ 9. Localization => Russian as default
+ 10. Install network driver
+ 11. Pacman
     1. Enable AUR
     2. Russian mirror
-12. **Remove trash**
+ 12. **Remove trash**
     `sudo pacman -Rs konversation`
-13. **Install applications**
-    `sudo pacman -S gnome-keyring gimp neofetch simplescreenrecorder libreoffice-fresh libreoffice-fresh-ru telegram-desktop dconf-editor aspell-ru ttf-fira-code etcher gimp-help-ru -y`
-14. **Install from AUR**
-    `pamac build ttf-ms-fonts ttf-vista-fonts spotify zoom teams google-chrome mailspring gitkraken teamviewer jre minecraft-launcher visual-studio-code-bin`
+ 13. **Install applications**
+    `sudo pacman -S gnome-keyring unzip bootsplash-systemd bootsplash-theme-manjaro latte ttf-droid amdgpu-experimental amdvlk vulkan-headers youtube-dl mpv gimp neofetch simplescreenrecorder libreoffice-fresh libreoffice-fresh-ru telegram-desktop qbittorrent gparted nvm flameshot radeontool radeontop onlyoffice-desktopeditors dconf-editor aspell-ru vulkan-radeon ttf-fira-code etcher gimp-help-ru -y`
+ 14. **Install from AUR**
+    `pamac build ttf-ms-fonts ttf-vista-fonts ttf-meslo spotify zoom adobe-base-14-fonts teams google-chrome mailspring gitkraken teamviewer jre minecraft-launcher visual-studio-code-bin`
+ 15. Avito VPN: `unzip configs/Avito/vpn.zip -d ~/.avito`
+ 16. Gitconfig: `cp configs/.gitconfig ~/.gitconfig`
 
 **Оформление**
  1. Оформление раб. среды: **Qokir Look-and-Feel Theme (Qogir-Dark)**
@@ -82,6 +85,7 @@
     1. Блокировка экрана: 5 минут.
     2. После выхода из ждущего режима.
     3. **Внешний вид:** выбрать Manjaro обои.
+    4. Края экрана: `В левом верхнем углу - все приложения все раб. столы`
 
  - **Запуск и завершение**
     1. Вход в систему (SDDM): `WhiteSur`; `Nordic`
@@ -100,7 +104,7 @@ menuentry 'Windows 10' --class windows --class os {
  5. Обновить *GRUB*: `sudo update-grub`
 
 **Boot Splash**
- 1. Установить: `bootsplash-systemmd`; `bootsplash-theme-manjaro`
+ 1. Установить: `bootsplash-systemd`; `bootsplash-theme-manjaro`
  2. **Редактировать**
     1. `/etc/mkinitcpio.conf` в `HOOKS` добавить `bootsplash-manjaro`
     2. `/etc/default/grub` в `DEFAULT` заменить `quiet` на `bootsplash.bootfile=bootsplash-themes/manjaro/bootsplash`
