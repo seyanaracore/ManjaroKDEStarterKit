@@ -42,22 +42,25 @@
     1. Дополнительно: `По центру`; `Не разрешать сохранять геометрию`
     - *Переключение окон*: `Показывать выбранное окно`; `Сетка миниатюр`
 
- 7. **Reboot**
+ 7. **Перезагрузка**
 
- 8. **Reapply KDE Wallet**
- 9. Localization => Russian as default
- 10. Install network driver
+ 8. **Переприменить KDE Wallet**
+ 9. **Локализация** => Русский по стандарту
+ 10. **Установить сетевой драйвер**
  11. Pacman
     1. Enable AUR
     2. Russian mirror
- 12. **Remove trash**
+ 12. **Удалить мусор**
     `sudo pacman -Rs konversation`
- 13. **Install applications**
-    `sudo pacman -S gnome-keyring unzip bootsplash-systemd bootsplash-theme-manjaro latte ttf-droid amdgpu-experimental amdvlk vulkan-headers youtube-dl mpv gimp neofetch simplescreenrecorder libreoffice-fresh libreoffice-fresh-ru telegram-desktop qbittorrent gparted nvm flameshot radeontool radeontop onlyoffice-desktopeditors dconf-editor aspell-ru vulkan-radeon ttf-fira-code etcher gimp-help-ru -y`
+ 13. **Установка приложений**
+    1. *Основное*: `sudo pacman -S gnome-keyring unzip bootsplash-systemd bootsplash-theme-manjaro latte ttf-droid youtube-dl mpv gimp neofetch simplescreenrecorder libreoffice-fresh libreoffice-fresh-ru telegram-desktop qbittorrent gparted nvm flameshot radeontop onlyoffice-desktopeditors dconf-editor aspell-ru ttf-fira-code etcher gimp-help-ru -y`
+    2. *Опции*: `radeontool vulkan-radeon amdgpu-experimental amdvlk vulkan-headers`
  14. **Install from AUR**
     `pamac build ttf-ms-fonts ttf-vista-fonts ttf-meslo spotify zoom adobe-base-14-fonts teams google-chrome mailspring gitkraken teamviewer jre minecraft-launcher visual-studio-code-bin`
- 15. Avito VPN: `unzip configs/Avito/vpn.zip -d ~/.avito`
- 16. Gitconfig: `cp configs/.gitconfig ~/.gitconfig`
+ 15. **Конфиги:**:
+    1. Avito VPN: `unzip configs/Avito/vpn.zip -d ~/.avito`
+    2. Gitconfig: `cp configs/.gitconfig ~/.gitconfig`
+    3. ZSH: `cp config/ZSH/.zshrc ~/.zshrc && cp config/ZSH/.p10k.zsh ~/.p10k.zsh`
 
 **Оформление**
  1. Оформление раб. среды: **Qokir Look-and-Feel Theme (Qogir-Dark)**
