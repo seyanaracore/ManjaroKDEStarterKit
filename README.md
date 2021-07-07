@@ -62,6 +62,13 @@
     2. Gitconfig: `cp configs/.gitconfig ~/.gitconfig`
     3. ZSH: `cp config/ZSH/.zshrc ~/.zshrc && cp config/ZSH/.p10k.zsh ~/.p10k.zsh`
 
+- **Compositor**
+ 1. Scale method: Smooth (slower)
+ 2. Rendering: XRender
+ 3. Latency: Balance
+ 4. Tearing: Automatic
+ 5. Keep window thumbnails: Only for Shown Windows
+
 **Оформление**
  1. Оформление раб. среды: **Qokir Look-and-Feel Theme (Qogir-Dark)**
  2. Приложения: Breeze; GTK: Qogir-win-dark
@@ -120,7 +127,7 @@ menuentry 'Windows 10' --class windows --class os {
 
 **Включить AMDGPU для дескретной видеокарты**
  1. Редактировать настройки *GRUB*: `sudo nano /etc/default/grub`
- 2. GRUB_CMDLINE_LINUX_DEFAULT >> `radeon.cik_support=0 amdgpu.cik_support=1 radeon.si_support=0 amdgpu.si_support=1"`
+ 2. GRUB_CMDLINE_LINUX_DEFAULT >> `radeon.cik_support=0 amdgpu.cik_support=1 radeon.si_support=0 amdgpu.si_support=1`
 
 **Spotify fix**
  1. Вариант 1: `cd /usr/share/applications/ && sudo sed -i "s/"'Exec=spotify %U'"/"'Exec=spotify %U --no-zygote'"/" spotify.desktop && cd ~`
