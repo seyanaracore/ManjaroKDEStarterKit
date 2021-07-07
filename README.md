@@ -55,6 +55,9 @@
  13. **Установка приложений**
     1. *Основное*: `sudo pacman -S gnome-keyring unzip bootsplash-systemd bootsplash-theme-manjaro latte ttf-droid youtube-dl mpv gimp neofetch simplescreenrecorder libreoffice-fresh libreoffice-fresh-ru telegram-desktop qbittorrent gparted nvm flameshot radeontop onlyoffice-desktopeditors dconf-editor aspell-ru ttf-fira-code etcher gimp-help-ru -y`
     2. *Опции*: `radeontool vulkan-radeon amdgpu-experimental amdvlk vulkan-headers`
+    3. *Fonts*:
+        1. `sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-cascadia-code ttf-droid ttf-fira-code ttf-fira-mono ttf-fira-sans ttf-inconsolata ttf-jetbrains-mono ttf-liberation ttf-meslo-nerd-font-powerlevel10k ttf-opensans ttf-roboto ttf-ubuntu-font-family gnu-free-fonts noto-fonts`
+        2. `sudo pamac build ttf-mac-fonts ttf-meslo ttf-monaco ttf-ms-fonts ttf-windows adobe-base-14-fonts ttf-vista-fonts`
  14. **Install from AUR**
     `pamac build ttf-ms-fonts ttf-vista-fonts ttf-meslo spotify zoom adobe-base-14-fonts teams google-chrome mailspring gitkraken teamviewer jre minecraft-launcher visual-studio-code-bin`
  15. **Конфиги:**:
