@@ -13,3 +13,4 @@
 1. SSDM - Nordic, WLLP: ManjaroAcidForest
 2. LinuxWay - LatteDock (start - manjaro icon)
 3. Panel - Size - 37, autohide; application menu, systemtray, notifications, lineclock, minimize windows
+4. Konsole - ManjaroWay profile
